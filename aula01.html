@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula01</title>
+    <STyle>
+      body {
+          font: normal,15pt Arial;
+      }
+            
+    </STyle>
+</head>
+<h1>Detector de Pais</h1>
+<input type="text" name="txtdect" id="txtdect">
+<input type="button" value="Verificar" onclick="Clicar()" >
+<div  id= "resp">
+
+</div>
+   <script>
+       function Clicar(){
+           var dec = window.document.querySelector('input#txtdect')
+           var resp = window.document.querySelector('div#resp')
+           var pais= (dec.value)
+           resp.innerHTML=` <p>Seu pais é <strong>${pais}!</strong></p>`
+           if (pais=="Brasil"){
+               resp.innerHTML+= ` <P>Você é Brasileiro!</p>`
+           } else{
+               resp.innerHTML+=`<P>Você é estrangeiro!</P>`
+           }
+       }
+   </script> 
+   
+   
+    
+</body>
+</html>

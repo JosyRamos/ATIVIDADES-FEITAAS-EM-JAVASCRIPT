@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula02</title>
+</head>
+<h1>Detector de dias da semana</h1>
+Digite o numero que corresponde ao dia da semana <input type="number" name="txtdias" id="txtdias">
+<input type="button" value="Verificar" onclick="Clicou()">
+<div id="Dia">
+    
+</div>
+<body>
+ <script>
+     function Clicou(){//EU MESMO QUEM CRIEI//
+     var sema = window.document.querySelector('input#txtdias')
+     var Dia = window.document.querySelector('div#Dia')
+     var semana = Number(sema.value)
+     Dia.innerHTML=`<p>Você digitou dia ${semana}</p> `
+     if (semana==1){
+         Dia.innerHTML+=`<p>Hoje é seguda-feira</p>`
+     }
+     if (semana == 2){
+         Dia.innerHTML+= `<p>Hoje é Terça-feira</p>`
+     }
+     if (semana == 3){
+         Dia.innerHTML+= `<p>Hoje é Quarta-feira</p>`
+     }
+     if (semana==4){
+         Dia.innerHTML+= `<p>Hoje é Quinta-Feira</p>`
+     }
+     if (semana==5){
+         Dia.innerHTML+= `<p>Hoje é Sexta-Feira</p>`
+     }
+     if (semana==6){
+         Dia.innerHTML+=`<p>Hoje é Sábado</p>`
+     }
+     if (semana==7){
+         Dia.innerHTML+= `<p>Hoje é Domingo</p>`
+     }
+     
+    if (semana > 7){
+         Dia.innerHTML+=`<p>Numero incorreto</p>`
+    }
+
+    }
+
+
+ </script>
+    
+
+    
+</body>
+</html>
